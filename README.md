@@ -1,6 +1,6 @@
 <div align="center">
 
-# Insta Collab Expense Tracker
+# CollabLedger
 
 ### A simpler way for Instagram creators to manage brand collaborations.
 
@@ -22,7 +22,7 @@ Track brand deals, deliverables, deadlines, and payments in one place—so you c
 
 The idea came while travelling. I started thinking about a common challenge for Instagram influencers and content creators: as brand collaborations increase, details get scattered across DMs, notes, and spreadsheets. Remembering what needs to be delivered, how much a brand owes, and when a payment is due can quickly become difficult.
 
-I built **Insta Collab Expense Tracker** to bring those details together in one simple workspace.
+I built **CollabLedger** to bring those details together in one simple workspace.
 
 ## Features
 
