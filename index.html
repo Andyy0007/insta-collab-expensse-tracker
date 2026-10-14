@@ -9,11 +9,35 @@
 :root{--bg:#f6f7fb;--card:#fff;--ink:#20223a;--muted:#777b91;--line:#e8e9f1;--purple:#6957e8;--pale:#efedff;--red:#c2413a;--amber:#9b6a05;--green:#177b52}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.5 Inter,system-ui,-apple-system,Segoe UI,sans-serif}button,input,select,textarea{font:inherit}button{cursor:pointer}.shell{max-width:1240px;margin:auto;padding:24px}.header{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:24px}.brand{display:flex;align-items:center;gap:12px}.logo{width:44px;height:44px;border-radius:14px;background:linear-gradient(135deg,#ff8d9b,#7959ec);color:white;display:grid;place-items:center;font-size:21px}.brand h1{font-size:20px;margin:0}.brand p{margin:2px 0 0;color:var(--muted);font-size:12px}.btn{border:1px solid var(--line);background:white;color:var(--ink);border-radius:10px;padding:10px 14px;font-weight:650}.btn.primary{background:var(--purple);border-color:var(--purple);color:#fff}.btn.danger{color:var(--red)}.tabs{display:flex;gap:7px;overflow:auto;margin-bottom:20px}.tab{border:0;background:transparent;padding:10px 14px;border-radius:10px;color:var(--muted);white-space:nowrap}.tab.active{background:var(--pale);color:var(--purple);font-weight:750}.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-bottom:18px}.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px;box-shadow:0 5px 20px #1b214008}.stat-label{font-size:12px;color:var(--muted)}.stat-value{font-size:26px;font-weight:800;letter-spacing:-.5px;margin:8px 0 3px}.stat-note{font-size:11px;color:var(--muted)}.layout{display:grid;grid-template-columns:1.5fr 1fr;gap:16px}.card h2{font-size:15px;margin:0}.card-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:15px}.toolbar{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0}.toolbar input,.toolbar select,.field input,.field select,.field textarea{border:1px solid var(--line);border-radius:9px;background:#fff;padding:10px 11px;min-width:0}.toolbar input{flex:1;min-width:180px}.table-wrap{overflow:auto}table{width:100%;border-collapse:collapse;white-space:nowrap}th{text-align:left;color:var(--muted);font-size:10px;text-transform:uppercase;letter-spacing:.6px;padding:12px 10px;border-bottom:1px solid var(--line)}td{padding:13px 10px;border-bottom:1px solid #f0f1f6;font-size:12px}tr:last-child td{border-bottom:0}.brandname{font-weight:750}.sub{font-size:11px;color:var(--muted)}.badge{display:inline-block;border-radius:99px;padding:4px 8px;font-size:10px;font-weight:800}.critical{background:#ffebea;color:var(--red)}.warning{background:#fff2d5;color:var(--amber)}.normal{background:#e4f7ee;color:var(--green)}.pending{background:#efedff;color:var(--purple)}.list-item{display:flex;gap:11px;padding:13px 0;border-bottom:1px solid var(--line)}.list-item:last-child{border:0}.dot{width:34px;height:34px;border-radius:11px;background:#fff0dd;display:grid;place-items:center;flex-shrink:0}.grow{flex:1;min-width:0}.list-item strong{font-size:12px}.list-item p{font-size:11px;color:var(--muted);margin:3px 0 0}.hidden{display:none!important}.section{display:none}.section.active{display:block}.approval{border:1px solid var(--line);border-radius:12px;padding:15px;margin-bottom:10px}.approval h3{margin:8px 0 3px;font-size:14px}.approval p{margin:0 0 12px;color:var(--muted);font-size:12px}.actions{display:flex;gap:7px;flex-wrap:wrap}.small{padding:7px 10px;font-size:11px}.empty{text-align:center;padding:30px;color:var(--muted)}.bars{height:180px;display:flex;align-items:flex-end;gap:10px;border-bottom:1px solid var(--line);padding:16px 0 0}.barbox{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%;gap:6px;min-width:0}.bar{width:min(34px,70%);background:linear-gradient(#a39aff,var(--purple));border-radius:6px 6px 2px 2px;min-height:2px}.barlabel{font-size:10px;color:var(--muted)}.barval{font-size:10px;color:var(--muted)}.modal{position:fixed;inset:0;background:#11152d80;display:none;align-items:center;justify-content:center;padding:15px;z-index:5}.modal.open{display:flex}.dialog{background:white;border-radius:16px;width:min(640px,100%);max-height:92vh;overflow:auto;padding:22px}.dialog h2{margin:0 0 16px}.formgrid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.field{display:grid;gap:5px}.field label{font-size:11px;color:var(--muted);font-weight:700}.field input,.field select,.field textarea{width:100%}.field.full{grid-column:1/-1}.form-actions{display:flex;justify-content:flex-end;gap:8px;margin-top:18px}.notice{background:#f2f0ff;color:#5143b7;padding:12px;border-radius:10px;font-size:12px;margin-bottom:15px}#toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#20223a;color:white;padding:11px 16px;border-radius:10px;display:none;z-index:9}
 @media(max-width:850px){.stats{grid-template-columns:repeat(2,minmax(0,1fr))}.layout{grid-template-columns:1fr}.shell{padding:16px}.header{align-items:flex-start}.stat-value{font-size:22px}}@media(max-width:480px){.header{flex-direction:column}.formgrid{grid-template-columns:1fr}.field.full{grid-column:auto}.stats{gap:9px}.card{padding:14px}.stat{padding:14px}.stat-value{font-size:20px}}
+
+/* Authentication gate */
+body:not(.authenticated) .shell{display:none}
+#authGate{min-height:100vh;display:grid;place-items:center;padding:22px;background:linear-gradient(135deg,#f6f7fb,#efedff)}
+body.authenticated #authGate{display:none}
+.auth-card{width:min(430px,100%);background:#fff;border:1px solid var(--line);border-radius:20px;padding:26px;box-shadow:0 16px 50px #1b214012}
+.auth-card h2{margin:0 0 5px;font-size:23px}.auth-card p{color:var(--muted);margin:0 0 18px}
+.auth-card .field{margin-bottom:13px}.auth-card .btn{width:100%;margin-top:8px}
+.auth-switch{display:flex;gap:8px;margin-bottom:18px}.auth-switch .btn{margin:0}.auth-switch .selected{background:var(--pale);color:var(--purple);border-color:var(--pale)}
+#authMessage{font-size:12px;margin-top:12px;overflow-wrap:anywhere}
 </style>
 </head>
 <body>
+<div id="authGate">
+  <div class="auth-card">
+    <div class="brand" style="margin-bottom:20px"><div class="logo">✦</div><div><h1>Insta Collab Expense Tracker</h1><p style="margin:2px 0 0">Your collaborations, securely synced</p></div></div>
+    <div class="auth-switch"><button type="button" class="btn selected" id="showLogin">Log in</button><button type="button" class="btn" id="showSignup">Create account</button></div>
+    <form id="authForm">
+      <div class="field" id="nameField" style="display:none"><label for="authName">Full name</label><input id="authName" autocomplete="name" placeholder="Your name"></div>
+      <div class="field"><label for="authEmail">Email address</label><input id="authEmail" type="email" autocomplete="email" required placeholder="you@example.com"></div>
+      <div class="field"><label for="authPassword">Password</label><input id="authPassword" type="password" autocomplete="current-password" minlength="8" required placeholder="At least 8 characters"></div>
+      <button class="btn primary" id="authSubmit" type="submit">Log in</button>
+    </form>
+    <div id="authMessage" role="status" aria-live="polite"></div>
+    <p style="font-size:11px;margin-top:18px">Your data is stored in your authenticated workspace. Use a unique password.</p>
+  </div>
+</div>
 <div class="shell">
-<header class="header"><div class="brand"><div class="logo">✦</div><div><h1>Insta Collab Expense Tracker</h1><p>Brand deals, deliverables and payments — in one place</p></div></div><button class="btn primary" id="addBtn">＋ New collaboration</button></header>
+<header class="header"><div class="brand"><div class="logo">✦</div><div><h1>Insta Collab Expense Tracker</h1><p>Brand deals, deliverables and payments — in one place</p><div class="sub" id="signedInAs"></div></div></div><div class="actions"><button class="btn" id="signOutBtn">Sign out</button><button class="btn primary" id="addBtn">＋ New collaboration</button></div></header>
 <nav class="tabs" id="tabs"><button class="tab active" data-tab="dashboard">Overview</button><button class="tab" data-tab="collabs">Collaborations</button><button class="tab" data-tab="approvals">Approval inbox <span id="pendingCount"></span></button><button class="tab" data-tab="payments">Payments</button><button class="tab" data-tab="analytics">Revenue analytics</button><button class="tab" data-tab="settings">Settings</button></nav>
 <section id="dashboard" class="section active">
 <div class="stats"><div class="card stat"><div class="stat-label">Total collaboration value</div><div class="stat-value" id="totalValue">₹0</div><div class="stat-note">Approved deals</div></div><div class="card stat"><div class="stat-label">Amount received</div><div class="stat-value" id="receivedValue">₹0</div><div class="stat-note">Payments recorded</div></div><div class="card stat"><div class="stat-label">Outstanding</div><div class="stat-value" id="outstandingValue">₹0</div><div class="stat-note">Still to be collected</div></div><div class="card stat"><div class="stat-label">Needs attention</div><div class="stat-value" id="attentionValue">0</div><div class="stat-note">Critical or warning items</div></div></div>
@@ -31,15 +55,167 @@
 <div class="field"><label>Booking date</label><input name="bookingDate" type="date" required></div><div class="field"><label>Deliverable deadline</label><input name="deadline" type="date" required></div>
 <div class="field"><label>Payment due date</label><input name="paymentDue" type="date"></div><div class="field"><label>Status</label><select name="status"><option>Confirmed</option><option>In progress</option><option>Delivered</option><option>Completed</option></select></div>
 <div class="field full"><label>Notes / payment terms</label><textarea name="notes" rows="2" placeholder="Payment after reel approval, usage rights, etc."></textarea></div></div><div class="form-actions"><button type="button" class="btn" id="cancelBtn">Cancel</button><button class="btn primary" type="submit">Save collaboration</button></div></form></div></div><div id="toast"></div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script>
 (()=>{'use strict';
+const SUPABASE_URL="https://ppltgdbhygpekhcnpwcd.supabase.co", SUPABASE_PUBLISHABLE_KEY="sb_publishable_wNOlkES3mlCjT1dTMFIwGg_FZMc97Au";
+const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_PUBLISHABLE_KEY);
+let currentUser=null, currentWorkspace=null, backendReady=false, syncQueue=Promise.resolve(), authMode='login', initializing=false;
 const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)], today=new Date();
 const dateISO=d=>{const x=new Date(d);return x.getFullYear()+'-'+String(x.getMonth()+1).padStart(2,'0')+'-'+String(x.getDate()).padStart(2,'0')};
 const addDays=n=>{const d=new Date();d.setDate(d.getDate()+n);return dateISO(d)};
 const sample=[{id:1,brand:'Nova Activewear',contact:'Partnerships team',deliverable:'1 Instagram Reel',amount:18000,received:9000,bookingDate:addDays(-18),deadline:addDays(5),paymentDue:addDays(12),status:'In progress',notes:'50% advance; balance after posting',payments:[{amount:9000,date:addDays(-5)}]},{id:2,brand:'Little Fern Organics',contact:'Creator relations',deliverable:'Reel + 3 Stories',amount:12500,received:0,bookingDate:addDays(-20),deadline:addDays(-2),paymentDue:addDays(-1),status:'Confirmed',notes:'Payment on delivery',payments:[]},{id:3,brand:'Sunday Studio',contact:'Brand manager',deliverable:'1 Instagram Reel',amount:22000,received:22000,bookingDate:addDays(-45),deadline:addDays(-10),paymentDue:addDays(-6),status:'Completed',notes:'Paid in full',payments:[{amount:22000,date:addDays(-7)}]}];
 let data;try{data=JSON.parse(localStorage.getItem('icet-data'))||null}catch{};if(!data)data={deals:sample,pending:[{id:101,brand:'Glow Theory',contact:'partnerships@example.com',deliverable:'1 Instagram Reel + story',amount:15500,bookingDate:dateISO(today),deadline:addDays(14),paymentDue:addDays(30),status:'Confirmed',notes:'Demo incoming message. Check all terms before approval.'}],nextId:200,settings:{currency:'INR',workspaceName:'Creator workspace'}};
 const money=n=>new Intl.NumberFormat('en-IN',{style:'currency',currency:data.settings.currency||'INR',maximumFractionDigits:0}).format(Number(n)||0);
-const save=()=>localStorage.setItem('icet-data',JSON.stringify(data));
+
+const save=()=>{
+  localStorage.setItem('icet-data',JSON.stringify(data));
+  if(backendReady) {
+    syncQueue=syncQueue.then(()=>syncSnapshot()).catch(err=>{
+      console.error('Database sync failed',err);
+      toast('Could not sync to database. Check connection and try again.');
+    });
+  }
+};
+const authMessage=(msg,isError=false)=>{const el=$('#authMessage');el.textContent=msg;el.style.color=isError?'var(--red)':'var(--green)'};
+const setAuthMode=mode=>{
+  authMode=mode;
+  $('#showLogin').classList.toggle('selected',mode==='login');
+  $('#showSignup').classList.toggle('selected',mode==='signup');
+  $('#nameField').style.display=mode==='signup'?'grid':'none';
+  $('#authName').required=mode==='signup';
+  $('#authPassword').autocomplete=mode==='signup'?'new-password':'current-password';
+  $('#authSubmit').textContent=mode==='signup'?'Create account':'Log in';
+  authMessage('');
+};
+const mapDeal=row=>({
+  id:row.id, brand:row.brand, contact:row.contact_name||row.contact_email||'',
+  deliverable:row.deliverable, amount:Number(row.amount||0), received:0,
+  bookingDate:row.booking_date||'', deadline:row.deadline||'', paymentDue:row.payment_due_date||'',
+  status:row.status, notes:row.notes||'', payments:[]
+});
+async function ensureWorkspace(){
+  const {data:members,error:mErr}=await supabase.from('workspace_members').select('workspace_id,role').eq('user_id',currentUser.id).limit(1);
+  if(mErr) throw mErr;
+  if(members&&members.length){
+    const {data:ws,error:wErr}=await supabase.from('workspaces').select('id,name,currency,owner_id').eq('id',members[0].workspace_id).single();
+    if(wErr) throw wErr;
+    currentWorkspace=ws;
+  } else {
+    const displayName=currentUser.user_metadata?.full_name||currentUser.email?.split('@')[0]||'Creator';
+    const {data:ws,error:wErr}=await supabase.from('workspaces').insert({name:displayName+"'s workspace",owner_id:currentUser.id,currency:'INR'}).select('id,name,currency,owner_id').single();
+    if(wErr) throw wErr;
+    currentWorkspace=ws;
+  }
+}
+async function loadSnapshot(){
+  const [dealsRes,requestsRes]=await Promise.all([
+    supabase.from('collaborations').select('*').eq('workspace_id',currentWorkspace.id).order('created_at',{ascending:false}),
+    supabase.from('collaboration_requests').select('*').eq('workspace_id',currentWorkspace.id).order('created_at',{ascending:false})
+  ]);
+  if(dealsRes.error) throw dealsRes.error;
+  if(requestsRes.error) throw requestsRes.error;
+  const dealRows=dealsRes.data||[];
+  const dealIds=dealRows.map(d=>d.id);
+  let paymentRows=[];
+  if(dealIds.length){
+    const {data:ps,error:pe}=await supabase.from('payments').select('*').in('collaboration_id',dealIds).order('paid_at',{ascending:true});
+    if(pe) throw pe;
+    paymentRows=ps||[];
+  }
+  const deals=dealRows.map(mapDeal);
+  for(const p of paymentRows){
+    const deal=deals.find(d=>d.id===p.collaboration_id);
+    if(deal){deal.payments.push({id:p.id,amount:Number(p.amount),date:p.paid_at});deal.received+=Number(p.amount||0)}
+  }
+  data={
+    deals,
+    pending:(requestsRes.data||[]).map(r=>({id:r.id,brand:r.brand,contact:r.contact_email||'',deliverable:r.deliverable||'',amount:Number(r.proposed_amount||0),bookingDate:r.created_at?.slice(0,10)||dateISO(today),deadline:r.proposed_deadline||'',paymentDue:'',status:r.status,notes:r.notes||''})),
+    nextId:200,settings:{currency:currentWorkspace.currency||'INR',workspaceName:currentWorkspace.name||'Creator workspace'}
+  };
+  $('#workspaceName').value=data.settings.workspaceName;
+  $('#currency').value=data.settings.currency;
+  localStorage.setItem('icet-data',JSON.stringify(data));
+}
+async function syncSnapshot(){
+  if(!backendReady||!currentUser||!currentWorkspace) return;
+  const deals=data.deals.map(d=>({
+    id:d.id,workspace_id:currentWorkspace.id,brand:d.brand,contact_name:d.contact||null,
+    contact_email:null,deliverable:d.deliverable,amount:Number(d.amount||0),
+    booking_date:d.bookingDate||null,deadline:d.deadline||null,payment_due_date:d.paymentDue||null,
+    status:d.status||'Confirmed',notes:d.notes||null,created_by:currentUser.id,updated_at:new Date().toISOString()
+  }));
+  if(deals.length){const {error}=await supabase.from('collaborations').upsert(deals,{onConflict:'id'});if(error)throw error;}
+  const {data:existingDeals,error:existingErr}=await supabase.from('collaborations').select('id').eq('workspace_id',currentWorkspace.id);
+  if(existingErr)throw existingErr;
+  const keptDealIds=new Set(data.deals.map(d=>d.id));
+  for(const old of existingDeals||[]) if(!keptDealIds.has(old.id)){const {error}=await supabase.from('collaborations').delete().eq('id',old.id).eq('workspace_id',currentWorkspace.id);if(error)throw error;}
+  const requests=data.pending.map(d=>({
+    id:d.id,workspace_id:currentWorkspace.id,brand:d.brand,contact_email:d.contact||null,
+    deliverable:d.deliverable||null,proposed_amount:Number(d.amount||0),
+    proposed_deadline:d.deadline||null,notes:d.notes||null,status:d.status==='Approved'||d.status==='Rejected'?d.status:'Pending',
+    created_by:currentUser.id
+  }));
+  if(requests.length){const {error}=await supabase.from('collaboration_requests').upsert(requests,{onConflict:'id'});if(error)throw error;}
+  const {data:existingReqs,error:reqErr}=await supabase.from('collaboration_requests').select('id').eq('workspace_id',currentWorkspace.id);
+  if(reqErr)throw reqErr;
+  const keptReqIds=new Set(data.pending.map(d=>d.id));
+  for(const old of existingReqs||[]) if(!keptReqIds.has(old.id)){const {error}=await supabase.from('collaboration_requests').delete().eq('id',old.id).eq('workspace_id',currentWorkspace.id);if(error)throw error;}
+  const payments=[];
+  for(const d of data.deals) for(const p of (d.payments||[])) payments.push({
+    id:p.id||(p.id=crypto.randomUUID()),collaboration_id:d.id,amount:Number(p.amount),
+    paid_at:p.date||dateISO(today),created_by:currentUser.id
+  });
+  if(payments.length){const {error}=await supabase.from('payments').upsert(payments,{onConflict:'id'});if(error)throw error;}
+  const {error:settingsErr}=await supabase.from('workspaces').update({name:data.settings.workspaceName,currency:data.settings.currency}).eq('id',currentWorkspace.id);
+  if(settingsErr) console.warn('Workspace settings sync failed',settingsErr.message);
+}
+async function enterApp(user){
+  if(initializing)return;
+  initializing=true;currentUser=user;backendReady=false;
+  try{
+    await ensureWorkspace();
+    await loadSnapshot();
+    document.body.classList.add('authenticated');
+    $('#signedInAs').textContent=currentUser.email+' · '+currentWorkspace.name;
+    backendReady=true;
+    render();
+  }catch(err){
+    console.error(err);
+    document.body.classList.remove('authenticated');
+    authMessage('Could not load your workspace: '+(err.message||'Unknown error')+'. Verify the SQL setup and RLS policies.',true);
+  }finally{initializing=false;}
+}
+$('#showLogin').addEventListener('click',()=>setAuthMode('login'));
+$('#showSignup').addEventListener('click',()=>setAuthMode('signup'));
+$('#authForm').addEventListener('submit',async e=>{
+  e.preventDefault();
+  const email=$('#authEmail').value.trim(),password=$('#authPassword').value,name=$('#authName').value.trim();
+  $('#authSubmit').disabled=true;authMessage(authMode==='signup'?'Creating your account…':'Signing in…');
+  try{
+    if(authMode==='signup'){
+      const {data:res,error}=await supabase.auth.signUp({email,password,options:{data:{full_name:name},emailRedirectTo:location.origin+location.pathname}});
+      if(error)throw error;
+      if(res.session&&res.user){authMessage('Account created. Opening your workspace…');await enterApp(res.user);}
+      else authMessage('Account created. Check your email to confirm your address, then return here and log in.');
+    }else{
+      const {data:res,error}=await supabase.auth.signInWithPassword({email,password});
+      if(error)throw error;
+      await enterApp(res.user);
+    }
+  }catch(err){authMessage(err.message||'Authentication failed.',true);}
+  finally{$('#authSubmit').disabled=false;}
+});
+$('#signOutBtn').addEventListener('click',async()=>{
+  backendReady=false;
+  const {error}=await supabase.auth.signOut();
+  if(error){authMessage(error.message,true);return;}
+  currentUser=null;currentWorkspace=null;document.body.classList.remove('authenticated');setAuthMode('login');authMessage('You have signed out.');
+});
+supabase.auth.onAuthStateChange((event,session)=>{
+  if(event==='SIGNED_OUT'){backendReady=false;currentUser=null;currentWorkspace=null;document.body.classList.remove('authenticated');}
+});
+
 const outstanding=d=>Math.max(0,Number(d.amount||0)-Number(d.received||0));
 const severity=d=>{const now=dateISO(today);if((d.deadline&&d.deadline<now&&d.status!=='Completed'&&d.status!=='Delivered')||(outstanding(d)>0&&d.paymentDue&&d.paymentDue<now))return'Critical';if((d.deadline&&d.deadline>=now&&d.deadline<=addDays(3)&&d.status!=='Completed')||(outstanding(d)>0&&d.paymentDue&&d.paymentDue>=now&&d.paymentDue<=addDays(5)))return'Warning';return'Normal'};
 const due=d=>d.paymentDue||'Not set';
@@ -58,12 +234,18 @@ function renderDeals(){let q=$('#search').value.toLowerCase(),st=$('#statusFilte
 function renderApprovals(){$('#approvalList').innerHTML=data.pending.map(d=>'<div class="approval"><div class="actions">'+badge('Pending')+' '+badge(severity(d))+'</div><h3>'+esc(d.brand)+'</h3><p>'+esc(d.contact||'No contact')+' · '+esc(d.deliverable)+' · '+money(d.amount)+'</p><p>Deadline: '+esc(d.deadline||'Not set')+' · Payment due: '+esc(d.paymentDue||'Not set')+'</p><p>'+esc(d.notes||'Review terms before approval.')+'</p><div class="actions"><button class="btn primary small" data-approve="'+d.id+'">Approve & add</button><button class="btn small" data-review="'+d.id+'">Edit & approve</button><button class="btn danger small" data-reject="'+d.id+'">Reject</button></div></div>').join('')||'<div class="empty">Inbox is clear.</div>'}
 function renderPayments(){$('#paymentRows').innerHTML=data.deals.map(d=>'<tr><td><b>'+esc(d.brand)+'</b><div class="sub">'+esc(d.deliverable)+'</div></td><td>'+money(d.amount)+'</td><td>'+money(d.received)+'</td><td>'+money(outstanding(d))+'</td><td>'+esc(due(d))+'</td><td>'+badge(severity(d))+'</td><td>'+(outstanding(d)>0?'<button class="btn small" data-pay="'+d.id+'">Record payment</button>':'<span class="sub">Paid</span>')+'</td></tr>').join('')||'<tr><td colspan="7" class="empty">No payments to track.</td></tr>'}
 function renderAnalytics(){const yr=Number($('#yearSelect').value)||today.getFullYear();const years=[...new Set([today.getFullYear(),...data.deals.map(d=>Number((d.bookingDate||'').slice(0,4))).filter(Boolean)])].sort((a,b)=>b-a);$('#yearSelect').innerHTML=years.map(y=>'<option '+(y===yr?'selected':'')+'>'+y+'</option>').join('');const monthly=Array(12).fill(0);let booked=0,received=0;data.deals.forEach(d=>{if(Number((d.bookingDate||'').slice(0,4))===yr){booked+=Number(d.amount||0);monthly[Number(d.bookingDate.slice(5,7))-1]+=Number(d.amount||0)}(d.payments||[]).forEach(p=>{if(Number((p.date||'').slice(0,4))===yr)received+=Number(p.amount||0)})});const max=Math.max(1,...monthly);$('#revenueBars').innerHTML=monthly.map((v,i)=>'<div class="barbox"><div class="barval">'+(v?money(v):'')+'</div><div class="bar" style="height:'+Math.max(v?3:0,v/max*110)+'px"></div><div class="barlabel">'+['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'][i]+'</div></div>').join('');$('#yearBooked').textContent=money(booked);$('#yearReceived').textContent=money(received);$('#dealCount').textContent=data.deals.filter(d=>(d.bookingDate||'').startsWith(String(yr))).length;$('#avgValue').textContent=money(booked/Math.max(1,data.deals.filter(d=>(d.bookingDate||'').startsWith(String(yr))).length))}
-$('#tabs').addEventListener('click',e=>{const b=e.target.closest('[data-tab]');if(b)go(b.dataset.tab)});document.addEventListener('click',e=>{const jump=e.target.closest('[data-jump]');if(jump)go(jump.dataset.jump);const edit=e.target.closest('[data-edit]');if(edit)openModal(data.deals.find(d=>d.id===Number(edit.dataset.edit)));const pay=e.target.closest('[data-pay]');if(pay)recordPayment(data.deals.find(d=>d.id===Number(pay.dataset.pay)));const del=e.target.closest('[data-delete]');if(del&&confirm('Delete this collaboration?')){data.deals=data.deals.filter(d=>d.id!==Number(del.dataset.delete));save();render();toast('Collaboration deleted')}const approve=e.target.closest('[data-approve]');if(approve){const d=data.pending.find(x=>x.id===Number(approve.dataset.approve));if(d){data.pending=data.pending.filter(x=>x.id!==d.id);data.deals.unshift({...d,id:data.nextId++,received:0,payments:[],status:'Confirmed'});save();render();toast('Approved and added')}}const reject=e.target.closest('[data-reject]');if(reject){data.pending=data.pending.filter(x=>x.id!==Number(reject.dataset.reject));save();render();toast('Incoming collaboration rejected')}const review=e.target.closest('[data-review]');if(review){const d=data.pending.find(x=>x.id===Number(review.dataset.review));if(d){openModal(d);$('#dealForm').dataset.pendingId=d.id}}});
-function recordPayment(d){if(!d||outstanding(d)<=0)return;const amount=prompt('Outstanding: '+money(outstanding(d))+'\nEnter amount received:');if(amount===null)return;const n=Number(amount);if(!Number.isFinite(n)||n<=0||n>outstanding(d)){toast('Enter a valid amount within outstanding balance');return}const dt=prompt('Payment date (YYYY-MM-DD)',dateISO(today));if(!dt||!/^\d{4}-\d{2}-\d{2}$/.test(dt)){toast('Enter date as YYYY-MM-DD');return}d.received=Number(d.received||0)+n;d.payments=d.payments||[];d.payments.push({amount:n,date:dt});save();render();toast('Payment recorded')}
+$('#tabs').addEventListener('click',e=>{const b=e.target.closest('[data-tab]');if(b)go(b.dataset.tab)});document.addEventListener('click',e=>{const jump=e.target.closest('[data-jump]');if(jump)go(jump.dataset.jump);const edit=e.target.closest('[data-edit]');if(edit)openModal(data.deals.find(d=>d.id===edit.dataset.edit));const pay=e.target.closest('[data-pay]');if(pay)recordPayment(data.deals.find(d=>d.id===pay.dataset.pay));const del=e.target.closest('[data-delete]');if(del&&confirm('Delete this collaboration?')){data.deals=data.deals.filter(d=>d.id!==del.dataset.delete);save();render();toast('Collaboration deleted')}const approve=e.target.closest('[data-approve]');if(approve){const d=data.pending.find(x=>x.id===approve.dataset.approve);if(d){data.pending=data.pending.filter(x=>x.id!==d.id);data.deals.unshift({...d,id:crypto.randomUUID(),received:0,payments:[],status:'Confirmed'});save();render();toast('Approved and added')}}const reject=e.target.closest('[data-reject]');if(reject){data.pending=data.pending.filter(x=>x.id!==reject.dataset.reject);save();render();toast('Incoming collaboration rejected')}const review=e.target.closest('[data-review]');if(review){const d=data.pending.find(x=>x.id===review.dataset.review);if(d){openModal(d);$('#dealForm').dataset.pendingId=d.id}}});
+function recordPayment(d){if(!d||outstanding(d)<=0)return;const amount=prompt('Outstanding: '+money(outstanding(d))+'\nEnter amount received:');if(amount===null)return;const n=Number(amount);if(!Number.isFinite(n)||n<=0||n>outstanding(d)){toast('Enter a valid amount within outstanding balance');return}const dt=prompt('Payment date (YYYY-MM-DD)',dateISO(today));if(!dt||!/^\d{4}-\d{2}-\d{2}$/.test(dt)){toast('Enter date as YYYY-MM-DD');return}d.received=Number(d.received||0)+n;d.payments=d.payments||[];d.payments.push({id:crypto.randomUUID(),amount:n,date:dt});save();render();toast('Payment recorded')}
 $('#addBtn').onclick=$('#addBtn2').onclick=()=>openModal();$('#cancelBtn').onclick=()=>{$('#modal').classList.remove('open');delete $('#dealForm').dataset.pendingId};$('#modal').addEventListener('click',e=>{if(e.target===$('#modal'))$('#modal').classList.remove('open')});
-$('#dealForm').addEventListener('submit',e=>{e.preventDefault();const f=e.currentTarget,o=Object.fromEntries(new FormData(f));o.amount=Number(o.amount);const editId=Number(f.dataset.id),pendingId=Number(f.dataset.pendingId);if(pendingId){data.pending=data.pending.filter(d=>d.id!==pendingId);data.deals.unshift({...o,id:data.nextId++,received:0,payments:[]});delete f.dataset.pendingId}else if(editId){const old=data.deals.find(d=>d.id===editId);if(old)Object.assign(old,o)}else{data.deals.unshift({...o,id:data.nextId++,received:0,payments:[]})}save();$('#modal').classList.remove('open');render();toast('Collaboration saved')});
+$('#dealForm').addEventListener('submit',e=>{e.preventDefault();const f=e.currentTarget,o=Object.fromEntries(new FormData(f));o.amount=Number(o.amount);const editId=f.dataset.id,pendingId=f.dataset.pendingId;if(pendingId){data.pending=data.pending.filter(d=>d.id!==pendingId);data.deals.unshift({...o,id:data.nextId++,received:0,payments:[]});delete f.dataset.pendingId}else if(editId){const old=data.deals.find(d=>d.id===editId);if(old)Object.assign(old,o)}else{data.deals.unshift({...o,id:data.nextId++,received:0,payments:[]})}save();$('#modal').classList.remove('open');render();toast('Collaboration saved')});
 $('#simulateBtn').onclick=()=>{data.pending.unshift({id:data.nextId++,brand:'Fresh incoming brand',contact:'creator@example.com',deliverable:'1 Instagram Reel',amount:12000,bookingDate:dateISO(today),deadline:addDays(10),paymentDue:addDays(30),status:'Confirmed',notes:'Simulated email. Verify the amount, deadline, and payment terms before approval.'});save();render();toast('Demo email added to approval inbox')};
 $('#search').oninput=renderDeals;$('#statusFilter').onchange=renderDeals;$('#severityFilter').onchange=renderDeals;$('#yearSelect').onchange=renderAnalytics;$('#saveSettings').onclick=()=>{data.settings.workspaceName=$('#workspaceName').value.trim()||'Creator workspace';data.settings.currency=$('#currency').value;save();render();toast('Settings saved')};$('#resetBtn').onclick=()=>{if(confirm('Reset demo records?')){data={deals:sample,pending:[],nextId:200,settings:{currency:'INR',workspaceName:'Creator workspace'}};save();$('#currency').value='INR';render();toast('Demo data reset')}};
-$('#workspaceName').value=data.settings.workspaceName||'Creator workspace';$('#currency').value=data.settings.currency||'INR';render();save();
+$('#workspaceName').value=data.settings.workspaceName||'Creator workspace';$('#currency').value=data.settings.currency||'INR';
+(async()=>{
+  const {data:{session},error}=await supabase.auth.getSession();
+  if(error){authMessage(error.message,true);return;}
+  if(session?.user) await enterApp(session.user);
+})();
+setAuthMode('login');
 })();
 </script></body></html>
