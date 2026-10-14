@@ -95,18 +95,14 @@ const mapDeal=row=>({
   status:row.status, notes:row.notes||'', payments:[]
 });
 async function ensureWorkspace(){
-  const {data:members,error:mErr}=await supabase.from('workspace_members').select('workspace_id,role').eq('user_id',currentUser.id).limit(1);
-  if(mErr) throw mErr;
-  if(members&&members.length){
-    const {data:ws,error:wErr}=await supabase.from('workspaces').select('id,name,currency,owner_id').eq('id',members[0].workspace_id).single();
-    if(wErr) throw wErr;
-    currentWorkspace=ws;
-  } else {
-    const displayName=currentUser.user_metadata?.full_name||currentUser.email?.split('@')[0]||'Creator';
-    const {data:ws,error:wErr}=await supabase.from('workspaces').insert({name:displayName+"'s workspace",owner_id:currentUser.id,currency:'INR'}).select('id,name,currency,owner_id').single();
-    if(wErr) throw wErr;
-    currentWorkspace=ws;
-  }
+  const displayName=currentUser.user_metadata?.full_name||currentUser.email?.split('@')[0]||'Creator';
+  const {data:ws,error:wErr}=await supabase.rpc('get_or_create_my_workspace',{
+    p_name:displayName+"'s workspace",
+    p_currency:'INR'
+  });
+  if(wErr) throw wErr;
+  currentWorkspace=Array.isArray(ws)?ws[0]:ws;
+  if(!currentWorkspace?.id) throw new Error('Supabase did not return a workspace for this account.');
 }
 async function loadSnapshot(){
   const [dealsRes,requestsRes]=await Promise.all([
