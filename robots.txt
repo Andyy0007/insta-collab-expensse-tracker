@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://collabledger.vercel.app/sitemap.xml
